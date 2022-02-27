@@ -31,7 +31,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/app/theme/style.css"
+              "src/theme/style.css",
+              "src/theme/devices/mobile/_mobile.scss",
+              "src/theme/devices/tablet/_tablet.scss",
+              "src/theme/devices/desktop/_desktop.scss"
             ],
             "scripts": []
           },
@@ -98,9 +101,7 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-              "src/app/theme/style.css"
-            ],
+            "styles": [],
             "scripts": []
           }
         }
