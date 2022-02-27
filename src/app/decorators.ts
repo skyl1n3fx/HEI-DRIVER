@@ -1,0 +1,14 @@
+import { AutoTitleService } from './services/auto-title.service';
+import { AppModule } from './app.module';
+export function PageTitle(title: string | string[]): ClassDecorator {
+  return function (constructor: any) {
+    const titleService = AppModule.injector.get(AutoTitleService);
+
+    const ngOnInit = constructor.prototype.ngOnInit;
+
+    constructor.prototype.ngOnInit = function () {
+      ngOnInit && ngOnInit.apply(this);
+      titleService.set(title);
+    };
+  };
+}
